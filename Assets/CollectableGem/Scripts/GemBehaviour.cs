@@ -24,6 +24,14 @@ public class GemBehaviour : MonoBehaviour
 		}
 	}
 
+	public void GemSpawned()
+	{
+		collectedParticleSystem.SetActive (false);
+		gemVisuals.SetActive (true);
+		gemCollider2D.enabled = true;
+		gameObject.SetActive (true);
+	}
+
 	void GemCollected()
 	{
 		gemCollider2D.enabled = false;

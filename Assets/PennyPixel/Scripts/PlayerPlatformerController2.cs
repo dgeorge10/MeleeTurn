@@ -1,9 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerPlatformerController2 : PhysicsObject {
 
+	public Text scoreT;
+
+	public int score = 0;
     public float maxSpeed = 7;
     public float jumpTakeOffSpeed = 7;
 
@@ -13,9 +17,22 @@ public class PlayerPlatformerController2 : PhysicsObject {
     // Use this for initialization
     void Awake () 
     {
+		scoreT.text = "Player 2: " + score;
         spriteRenderer = GetComponent<SpriteRenderer> (); 
         animator = GetComponent<Animator> ();
     }
+
+	void OnTriggerEnter2D(Collider2D theCollider)
+	{
+		if (theCollider.CompareTag ("Gem")) {
+			score++;
+			scoreT.text = "Player 2: " + score;
+		}
+		if (theCollider.CompareTag ("SpecialGem")) {
+			score+=3;
+			scoreT.text = "Player 1: " + score;
+		}
+	}
 
     protected override void ComputeVelocity()
     {
