@@ -8,7 +8,7 @@ public class WinGame : MonoBehaviour {
 	
 	public Transform canvas;
 	public Text gameOverText;
-
+	public int maxScore;
 	GameObject player1;
 	PlayerPlatformerController playerScript1; 
 
@@ -27,12 +27,12 @@ public class WinGame : MonoBehaviour {
 		//Debug.Log (playerScript2.getScore ());
 	}
 	void Update () {
-		if (playerScript1.getScore () >= 10 && canvas.gameObject.activeInHierarchy == false) {
+		if (playerScript1.getScore () >= maxScore && canvas.gameObject.activeInHierarchy == false) {
 			gameOverText.text = "Player 1 Wins!";
 			canvas.gameObject.SetActive (true);
 			Time.timeScale = 0;
 		}
-		if (playerScript2.getScore() >= 10 && canvas.gameObject.activeInHierarchy == false) {
+		if (playerScript2.getScore() >= maxScore && canvas.gameObject.activeInHierarchy == false) {
 			gameOverText.text = "Player 2 Wins!";
 			canvas.gameObject.SetActive (true);
 			Time.timeScale = 0;
