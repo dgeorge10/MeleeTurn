@@ -33,7 +33,7 @@ public class PlayerPlatformerController : PhysicsObject {
 			scoreT.text = "Player 1: " + score;
 		}
 	}
-
+		
     protected override void ComputeVelocity()
     {
         Vector2 move = Vector2.zero;
@@ -69,4 +69,10 @@ public class PlayerPlatformerController : PhysicsObject {
 
         targetVelocity = move * maxSpeed;
     }
+	public int getScore(){
+		return score;
+	}
+	public void setScore(int score){
+		this.score = score;
+	}
 }

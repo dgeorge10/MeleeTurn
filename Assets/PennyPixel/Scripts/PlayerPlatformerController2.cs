@@ -69,4 +69,10 @@ public class PlayerPlatformerController2 : PhysicsObject {
 
         targetVelocity = move * maxSpeed;
     }
+	public int getScore(){
+		return score;
+	}
+	public void setScore(int score){
+		this.score = score;
+	}
 }
