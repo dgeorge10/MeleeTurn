@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/Game.unity
-    guid: 612675d91d8e46f4cb6db861c07cde77
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Scenes/Main.unity
-    guid: e0ff4259b92775a4cb000b6082d98618
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 2c485cff112980749a6ef3e70e9523e0
@@ -26,12 +26,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level2.unity
     guid: 54a2464dcb55b4fd7b960f847dbe5ed2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level3.unity
     guid: c410f21a36fcc433185c3bf4ad03bca3
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Level4.unity
-    guid: 17da296f0cbee4fd4895782e22acf482
+    guid: 9ca25d346c6b341ab82f1168dcc98e36
   - enabled: 0
-    path: Assets/__DELETED_GUID_Trash/4ef140ddfa0be4100b4bc7a165368864
-    guid: 4ef140ddfa0be4100b4bc7a165368864
+    path: Assets/__DELETED_GUID_Trash/5aa6317769cca4ba692018576a62a3d3
+    guid: 5aa6317769cca4ba692018576a62a3d3
+  m_configObjects: {}
