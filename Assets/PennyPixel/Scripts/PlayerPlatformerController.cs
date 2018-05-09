@@ -7,6 +7,9 @@ public class PlayerPlatformerController : PhysicsObject {
 
 	public Text scoreT;
 
+	public string playerName;
+	public bool active = true;
+
 	public int score = 0;
     public float maxSpeed = 7;
     public float jumpTakeOffSpeed = 7;
@@ -17,7 +20,8 @@ public class PlayerPlatformerController : PhysicsObject {
     // Use this for initialization
     void Awake () 
     {
-		scoreT.text = "Player 1: " + score;
+		this.tag = playerName;
+		scoreT.text = playerName + ": " + score;
         spriteRenderer = GetComponent<SpriteRenderer> (); 
         animator = GetComponent<Animator> ();
     }
@@ -26,16 +30,18 @@ public class PlayerPlatformerController : PhysicsObject {
 	{
 		if (theCollider.CompareTag ("Gem")) {
 			score++;
-			scoreT.text = "Player 1: " + score;
+			scoreT.text = playerName + ": " + score;
 		}
 		if (theCollider.CompareTag ("SpecialGem")) {
 			score+=3;
-			scoreT.text = "Player 1: " + score;
+			scoreT.text = playerName + ": " + score;
 		}
 	}
 		
     protected override void ComputeVelocity()
     {
+		if (active == true)
+			return;
         Vector2 move = Vector2.zero;
 
         move.x = Input.GetAxis ("HorizontalLetter");
@@ -74,5 +80,8 @@ public class PlayerPlatformerController : PhysicsObject {
 	}
 	public void setScore(int score){
 		this.score = score;
+	}
+	public void setActive(bool a){
+		active = a;
 	}
 }

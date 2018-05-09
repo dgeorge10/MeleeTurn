@@ -11,6 +11,8 @@ public class PlayerPlatformerController2 : PhysicsObject {
     public float maxSpeed = 7;
     public float jumpTakeOffSpeed = 7;
 
+	public bool active = true;
+
     private SpriteRenderer spriteRenderer;
     private Animator animator;
 
@@ -74,5 +76,8 @@ public class PlayerPlatformerController2 : PhysicsObject {
 	}
 	public void setScore(int score){
 		this.score = score;
+	}
+	public void setActive(bool a){
+		active = a;
 	}
 }

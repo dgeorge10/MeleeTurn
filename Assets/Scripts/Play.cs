@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Play : MonoBehaviour {
 
+	public GameObject player1;
+	public GameObject player2;
+
 	public GameObject[] gems;
 	public float spawnTime;
 
