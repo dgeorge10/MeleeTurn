@@ -5538,7 +5538,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 1834872967}
   gameOverText: {fileID: 497206372}
-  maxScore: 2
+  maxScore: 10
 --- !u!1 &1536321745
 GameObject:
   m_ObjectHideFlags: 3

@@ -5223,7 +5223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 1516593733}
   gameOverText: {fileID: 807030075}
-  maxScore: 5
+  maxScore: 10
 --- !u!114 &1437703641
 MonoBehaviour:
   m_ObjectHideFlags: 0
