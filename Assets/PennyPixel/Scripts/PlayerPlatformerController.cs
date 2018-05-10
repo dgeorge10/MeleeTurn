@@ -8,7 +8,7 @@ public class PlayerPlatformerController : PhysicsObject {
 	public Text scoreT;
 
 	public string playerName;
-	public bool active = true;
+	bool active = true;
 
 	public int score = 0;
     public float maxSpeed = 7;
@@ -17,6 +17,13 @@ public class PlayerPlatformerController : PhysicsObject {
     private SpriteRenderer spriteRenderer;
     private Animator animator;
 
+	public void deactivate() {
+		this.active = false;
+	}
+	public void activate() {
+		this.active = true;
+	}
+		
     // Use this for initialization
     void Awake () 
     {
@@ -40,15 +47,13 @@ public class PlayerPlatformerController : PhysicsObject {
 		
     protected override void ComputeVelocity()
     {
-		if (active == true)
-			return;
         Vector2 move = Vector2.zero;
 
-        move.x = Input.GetAxis ("HorizontalLetter");
+		if (active == true) move.x = Input.GetAxis ("HorizontalArrow");
 
-        if (Input.GetButtonDown ("Jump") && grounded) {
+		if (active == true && Input.GetButtonDown ("Jump") && grounded) {
             velocity.y = jumpTakeOffSpeed;
-        } else if (Input.GetButtonUp ("Jump")) 
+		} else if (active == true && Input.GetButtonUp ("Jump")) 
         {
             if (velocity.y > 0) {
                 velocity.y = velocity.y * 0.5f;
@@ -80,8 +85,5 @@ public class PlayerPlatformerController : PhysicsObject {
 	}
 	public void setScore(int score){
 		this.score = score;
-	}
-	public void setActive(bool a){
-		active = a;
 	}
 }

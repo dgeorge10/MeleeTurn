@@ -12,9 +12,8 @@ public class WinGame : MonoBehaviour {
 	GameObject player1;
 	PlayerPlatformerController playerScript1; 
 
-
 	GameObject player2;
-	PlayerPlatformerController2 playerScript2; 
+	PlayerPlatformerController playerScript2;
 
 	void Start(){
 		canvas.gameObject.SetActive (false);
@@ -22,7 +21,7 @@ public class WinGame : MonoBehaviour {
 		playerScript1 = player1.GetComponent<PlayerPlatformerController>();
 
 		player2 =  GameObject.FindWithTag("Player2");
-		playerScript2 = player2.GetComponent<PlayerPlatformerController2>();
+		playerScript2 = player2.GetComponent<PlayerPlatformerController>();
 
 		//Debug.Log (playerScript2.getScore ());
 	}
