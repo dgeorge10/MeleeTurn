@@ -17,7 +17,7 @@ public class PlayerPlatformerController : PhysicsObject {
     // Use this for initialization
     void Awake () 
     {
-		scoreT.text = "Player 1: " + score;
+        scoreT.text = "Player 1: " + score + '/' + SelectGems.Gems;
         spriteRenderer = GetComponent<SpriteRenderer> (); 
         animator = GetComponent<Animator> ();
     }
@@ -26,11 +26,11 @@ public class PlayerPlatformerController : PhysicsObject {
 	{
 		if (theCollider.CompareTag ("Gem")) {
 			score++;
-			scoreT.text = "Player 1: " + score;
+            scoreT.text = "Player 1: " + score + '/' + SelectGems.Gems;
 		}
 		if (theCollider.CompareTag ("SpecialGem")) {
 			score+=3;
-			scoreT.text = "Player 1: " + score;
+            scoreT.text = "Player 1: " + score + '/' + SelectGems.Gems;
 		}
 	}
 		
