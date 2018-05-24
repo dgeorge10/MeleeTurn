@@ -1450,7 +1450,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 1834872967}
   gameOverText: {fileID: 0}
-  maxScore: 0
 --- !u!1 &187998183
 GameObject:
   m_ObjectHideFlags: 0
@@ -5367,6 +5366,7 @@ GameObject:
   - component: {fileID: 1517176629}
   - component: {fileID: 1517176631}
   - component: {fileID: 1517176632}
+  - component: {fileID: 1517176633}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -5435,7 +5435,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 1834872967}
   gameOverText: {fileID: 497206372}
-  maxScore: 8
+--- !u!114 &1517176633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1517176628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19f4f9c470a7405b80d9ce01d92a463, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  input: {fileID: 0}
+  Gems: 0
 --- !u!1 &1536321745
 GameObject:
   m_ObjectHideFlags: 3
@@ -7261,7 +7273,7 @@ Tilemap:
   - first: {x: 12, y: 5, z: 0}
     second:
       m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -7288,12 +7300,12 @@ Tilemap:
   - m_RefCount: 106
     m_Data: {fileID: 11400000, guid: 3e5d6e7340b6c45d89cb75ff5b40ec34, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 1
-    m_Data: {fileID: 21300190, guid: 3b30003999f7c419b878b6e3e3948812, type: 3}
-  - m_RefCount: 2
-    m_Data: {fileID: 21300146, guid: 3b30003999f7c419b878b6e3e3948812, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 2
+    m_Data: {fileID: 21300146, guid: 3b30003999f7c419b878b6e3e3948812, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300190, guid: 3b30003999f7c419b878b6e3e3948812, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300144, guid: 3b30003999f7c419b878b6e3e3948812, type: 3}
   - m_RefCount: 1

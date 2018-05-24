@@ -8,13 +8,14 @@ public class WinGame : MonoBehaviour {
 	
 	public Transform canvas;
 	public Text gameOverText;
-	public int maxScore;
+	int maxScore = 0;
 	GameObject player1;
 	PlayerPlatformerController playerScript1; 
 
-
 	GameObject player2;
-	PlayerPlatformerController2 playerScript2; 
+	PlayerPlatformerController2 playerScript2;
+
+    //public GameObject gems;
 
 	void Start(){
 		canvas.gameObject.SetActive (false);
@@ -23,6 +24,13 @@ public class WinGame : MonoBehaviour {
 
 		player2 =  GameObject.FindWithTag("Player2");
 		playerScript2 = player2.GetComponent<PlayerPlatformerController2>();
+
+        //SelectGems winAmount = GetComponent<SelectGems>();
+
+        var selectGems = GameObject.Find("GemController");
+        SelectGems winAmount = selectGems.GetComponent<SelectGems>();
+        maxScore = winAmount.Gems;
+        Debug.Log(maxScore);
 
 		//Debug.Log (playerScript2.getScore ());
 	}
@@ -42,6 +50,5 @@ public class WinGame : MonoBehaviour {
 		Time.timeScale = 1;
 		SceneManager.LoadScene (sceneIndex);
 	}
-
 }
 
