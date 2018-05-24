@@ -24,7 +24,9 @@ public class WinGame : MonoBehaviour {
 		player2 =  GameObject.FindWithTag("Player2");
 		playerScript2 = player2.GetComponent<PlayerPlatformerController2>();
 
-		//Debug.Log (playerScript2.getScore ());
+        //Debug.Log (playerScript2.getScore ());
+        maxScore = SelectGems.Gems;
+        Debug.Log(maxScore);
 	}
 	void Update () {
 		if (playerScript1.getScore () >= maxScore && canvas.gameObject.activeInHierarchy == false) {
