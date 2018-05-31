@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class SelectGems : MonoBehaviour
 {
 
+	public Text text;
     public InputField input;
     public static int Gems = 10;
 
@@ -33,7 +34,7 @@ public class SelectGems : MonoBehaviour
         }
         else
         {
-            input.text = "Current game set to " + gems + " gems!";
+			text.text = "Current Gems to Win: " + gems;
             Gems = Int32.Parse(gems);
             Debug.Log(Gems);
         }
