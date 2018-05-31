@@ -8,7 +8,7 @@ public class SelectGems : MonoBehaviour
 {
 
     public InputField input;
-    public static int Gems;
+    public static int Gems = 10;
 
     //   private void Awake()
     //   {
